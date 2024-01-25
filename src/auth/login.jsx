@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/image-logo.png'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -25,7 +26,9 @@ const Login = () => {
                     <input type="text" placeholder="Type here" className="input input-bordered border-4 w-full max-w-xs" />
                 </label>
                 <div className='flex justify-end'>
-                    <button className="btn bg-amber-800 text-white font-bold">Login</button>
+                    <Link to={'/home'}>
+                        <button className="btn bg-amber-800 text-white font-bold">Login</button>
+                    </Link>
                 </div>
             </div>
         </div>

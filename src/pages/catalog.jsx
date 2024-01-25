@@ -21,7 +21,7 @@ const Catalog = () => {
                 </thead>
                 <tbody>
                     {
-                        Object.keys(catalog_list).length !== 0 && catalog_list.map((data, i) => {
+                        Object.keys(catalog_list).length !== 0? catalog_list.map((data, i) => {
                             return (
                                 <tr key={i}>
                                     <td>{data.name}</td>
@@ -29,7 +29,7 @@ const Catalog = () => {
                                     <td>{`$${data.price}`}</td>
                                 </tr>
                             )
-                        })
+                        }): <h1 className='text-2xl'>Loading...</h1>
                     }
                 </tbody>
             </table>

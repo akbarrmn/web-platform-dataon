@@ -24,7 +24,7 @@ const Distributors = () => {
                     </thead>
                     <tbody>
                         {
-                            Object.keys(distributor_list).length !== 0 && distributor_list.map((data, i) => {
+                            Object.keys(distributor_list).length !== 0 ? distributor_list.map((data, i) => {
                                 return (
                                     <tr key={i}>
                                         <td>{data.name}</td>
@@ -32,7 +32,7 @@ const Distributors = () => {
                                         <td><Link to={`/distributors/edit/${data.id}`} className='text-black font-bold'>{"[Edit]"}</Link></td>
                                     </tr>
                                 )
-                            })
+                            }): <h1 className='text-2xl'>Loading...</h1>
                         }
                     </tbody>
                 </table>
